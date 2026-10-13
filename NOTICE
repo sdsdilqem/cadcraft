@@ -22,3 +22,5 @@ each under the SIL Open Font License 1.1.
 
 CADCraft is an independent project and is not affiliated with, sponsored by or endorsed by
 Autodesk, Inc. AutoCAD and DWG are trademarks of Autodesk, Inc.
+
+Modified by sdsdilqem: added a license check (crates/craft-license) that CADCraft runs at start-up.

@@ -228,6 +228,8 @@ fn control_flag(current: Option<u16>, value: Option<String>) -> Option<u16> {
 fn main() -> eframe::Result {
     // First, so every start-up record is captured; see `logging`.
     let logger = logging::install();
+    // Stop here, with a message, unless this computer has a valid license (`craft-license`).
+    craft_license::enforce("CADCraft");
     // lossy, so a value that is not Unicode is reported like any other bad port instead of ignored
     let mut control_port =
         control_port_from("CADCRAFT_CONTROL_PORT", std::env::var_os("CADCRAFT_CONTROL_PORT").map(|p| p.to_string_lossy().into_owned()));
